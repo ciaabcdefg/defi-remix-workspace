@@ -1,0 +1,226 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "dataHash",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint64",
+						"name": "block",
+						"type": "uint64"
+					}
+				],
+				"name": "CommitHash",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "revealHash",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "random",
+						"type": "uint256"
+					}
+				],
+				"name": "RevealHash",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "dataHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "commit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "commits",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "commit",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint64",
+						"name": "block",
+						"type": "uint64"
+					},
+					{
+						"internalType": "bool",
+						"name": "revealed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "data",
+						"type": "bytes32"
+					}
+				],
+				"name": "getHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMyCommit",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes32",
+								"name": "commit",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "uint64",
+								"name": "block",
+								"type": "uint64"
+							},
+							{
+								"internalType": "bool",
+								"name": "revealed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct CommitReveal.Commit",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "max",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "revealHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "reveal",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/CommitReveal.sol": "CommitReveal"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/CommitReveal.sol": {
+			"keccak256": "0xed666229077ebc88add6823a02cc062eb0060ff4f94e5c9d6aa82101d664f6b4",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://859c17a541dc63b8e22ecef81a2fa3e772b3cd77a116f9888afc72b00f464d56",
+				"dweb:/ipfs/QmdTtDqJcyn6zti3fcLmJPvwJYzMfo4gwqwvAWj1VDnpQR"
+			]
+		}
+	},
+	"version": 1
+}
